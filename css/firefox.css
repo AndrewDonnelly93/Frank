@@ -1,0 +1,79 @@
+@-moz-document url-prefix() {
+  .main-menu-list li a {
+    padding-left: 42px;
+    padding-right: 43px; }
+
+  .ent-soc {
+    margin-top: 16px; }
+
+  .profile-info .alarm-count .text {
+    top: 1px; }
+
+  .small-cashbox span:before {
+    top: 4%; }
+
+  .cashbox span:before {
+    top: 4%; }
+
+  .take-part-btn span:before {
+    top: 4%; }
+
+  .tournament-name-box {
+    padding-top: 13px;
+    padding-bottom: 16px; }
+
+  .lead-players-table tr.dynamic {
+    line-height: 26px; }
+
+  @keyframes get-no-bg-change {
+    0% {
+      transform: none;
+      -moz-transform: none;
+      -ms-transform: none;
+      -o-transform: none;
+      -webkit-transform: none; }
+
+    50% {
+      transform: scale(1.1);
+      -moz-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      -o-transform: scale(1.1);
+      -webkit-transform: scale(1.1);
+      transform: scale3d(1.1, 1.1, 1.1);
+      -moz-transform: scale3d(1.1, 1.1, 1.1);
+      -ms-transform: scale3d(1.1, 1.1, 1.1);
+      -o-transform: scale3d(1.1, 1.1, 1.1);
+      -webkit-transform: scale3d(1.1, 1.1, 1.1); }
+
+    100% {
+      transform: none;
+      -moz-transform: none;
+      -ms-transform: none;
+      -o-transform: none;
+      -webkit-transform: none; } }
+
+  /* Landing */
+  .landing-block .get-btn .get-btn-bg {
+    -webkit-animation-name: get-no-bg-change;
+    -moz-animation-name: get-no-bg-change;
+    -o-animation-name: get-no-bg-change;
+    animation-name: get-no-bg-change;
+    -webkit-animation-duration: 2s;
+    -moz-animation-duration: 2s;
+    -o-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+    -o-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-fill-mode: none;
+    -moz-animation-fill-mode: none;
+    -o-animation-fill-mode: none;
+    animation-fill-mode: none;
+    background: url(.././pic/landing/start-btn.png) no-repeat 0 0; }
+    .landing-block .get-btn .get-btn-bg.change-bg {
+      background: url(.././pic/landing/end-btn.png) no-repeat 0 0; } }

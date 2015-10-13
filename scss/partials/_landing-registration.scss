@@ -1,0 +1,221 @@
+$media-indent: 100px;
+$landing-reg-form-w: 852px;
+$landing-reg-form-h: 273px;
+$landing-reg-popup-w: 1400px;
+$landing-reg-popup-h: 761px;
+$popup-reg-light-w: 1250px;
+$popup-reg-light-h: 10px;
+$bonus-for-registration-w: 273px;
+$landing-coins-w: 232px;
+$landing-coins-h: 63px;
+$count-of-spins-w: 161px;
+$count-of-spins-h: 98px;
+$landing-reg-lines-w: 538px;
+$landing-reg-lines-h: 196px;
+$russian-text-bonus-w: 159px;
+$russian-text-bonus-h: 70px;
+$english-text-bonus-w: 154px;
+$english-text-bonus-h: 75px;
+$spanish-text-bonus-w: 156px;
+$spanish-text-bonus-h: 70px;
+$chips-w: 150px;
+$chips-h: 141px;
+$landing-reg-bonus-image-w: 309px;
+$landing-reg-bonus-image-h: 233px;
+$landing-reg-accept-conditions-block-w: 180px;
+
+.landing-registration {
+  overflow-x: hidden;
+  .popup.registration.large {
+    display: none;
+    &.active {
+      display: block;
+    }
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -1/2 * $landing-reg-popup-h;
+    margin-left: - 1/2 * $landing-reg-popup-w;
+    @include size(100%,$landing-reg-popup-h);
+    min-width: $landing-reg-form-w;
+    max-width: $landing-reg-popup-w;
+    .popup-main-head .already-registered {
+      top: 0;
+    }
+    .popup-footer-light-container {
+      bottom: -2px;
+    }
+    .popup-header-light-container {
+      top: -9px;
+    }
+    .popup-light {
+      position: relative;
+      width: $popup-reg-light-w;
+      height: $popup-reg-light-h;
+      margin: 0 auto;
+      background: url(../pic/landing-registration/lights.png) no-repeat 0 0;
+    }
+    .registration-form {
+      overflow: hidden;
+      @include size($landing-reg-form-w,$landing-reg-form-h);
+      margin-top: 85px !important;
+      position: relative;
+      .input-block {
+        margin-bottom: 22px;
+      }
+      .input-container:first-child {
+        margin-bottom: 20px;
+      }
+      .middle-block {
+        margin-left: 0;
+        padding-top: 29px;
+      }
+      .background {
+        position: absolute;
+        display: block;
+        top: 1px;
+        left: 1px;
+        @include size($landing-reg-form-w - 4,$landing-reg-form-h - 2);
+        background: url(../pic/landing-registration/bg.png) no-repeat 0 0;
+        &:before {
+          display: block;
+          content: '';
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          @include size($landing-coins-w,$landing-coins-h);
+          background: url(../pic/landing-registration/coins.png) no-repeat 0 0;
+        }
+      }
+      .bonus-for-registration {
+        @include size($bonus-for-registration-w,100%);
+        float: left;
+        @include border-box;
+        position: relative;
+        .count-of-spins {
+          @include size($count-of-spins-w,$count-of-spins-h);
+          position: absolute;
+          top: 9px;
+          left: 81px;
+          &:after {
+            display: block;
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            @include size($count-of-spins-w,$count-of-spins-h);
+            background: url(../pic/landing-registration/count-of-spins.png) no-repeat 0 0;
+            z-index: 2;
+          }
+          &:before {
+            display: block;
+            content: '';
+            position: absolute;
+            top: -26px;
+            left: -120px;
+            @include size($landing-reg-lines-w,$landing-reg-lines-h);
+            background: url(../pic/landing-registration/lines.png) no-repeat 0 0;
+          }
+        }
+        .text-bonus {
+          position: absolute;
+          top: 76px;
+          left: 81px;
+        }
+        .chips {
+          position: absolute;
+          left: -57px;
+          top: 5px;
+          @include size($chips-w,$chips-h);
+          background: url(../pic/landing-registration/chips.png) no-repeat 0 0;
+        }
+        .bonus-image {
+          position: absolute;
+          bottom: -1px;
+          left: 11px;
+          @include size($landing-reg-bonus-image-w,$landing-reg-bonus-image-h);
+          background: url(../pic/landing-registration/free-spins.png) no-repeat 0 0;
+        }
+      }
+      .accept-conditions-block {
+        @include border-box;
+        position: relative;
+        width: $landing-reg-accept-conditions-block-w;
+      }
+      /*
+        localization
+      */
+      &.russian {
+        .bonus-for-registration {
+          .text-bonus {
+            @include size($russian-text-bonus-w,$russian-text-bonus-h);
+            background: url(../pic/landing-registration/russian.png) no-repeat 0 0;
+          }
+        }
+      }
+      &.english {
+        .bonus-for-registration {
+          .count-of-spins {
+            left: 87px;
+          }
+          .text-bonus {
+            top: 74px;
+            left: 91px;
+            @include size($english-text-bonus-w,$english-text-bonus-h);
+            background: url(../pic/landing-registration/english.png) no-repeat 0 0;
+          }
+          .bonus-image {
+            bottom: -3px;
+            left: 15px;
+          }
+        }
+      }
+      &.spanish {
+        .bonus-for-registration {
+          .count-of-spins {
+            left: 87px;
+          }
+          .text-bonus {
+            left: 91px;
+            @include size($spanish-text-bonus-w,$spanish-text-bonus-h);
+            background: url(../pic/landing-registration/spanish.png) no-repeat 0 0;
+          }
+          .bonus-image {
+            bottom: -3px;
+            left: 15px;
+          }
+        }
+      }
+    }
+    .enter-social-block {
+      margin-top: 26px;
+    }
+  }
+  /*
+  media
+  */
+  @media only screen and (max-width: $landing-reg-form-w) {
+    min-width: $landing-reg-form-w;
+    .popup.registration.large {
+      margin-left: - 1/2 * $landing-reg-form-w;
+    }
+  }
+  @media only screen and (min-width: $landing-reg-form-w + 1) and (max-width: $landing-reg-popup-w - 1) {
+    min-width: 100% !important;
+    .popup.registration.large {
+      margin-left: - 1/2 * 100%;
+    }
+  }
+  @media only screen and (min-width: $landing-reg-popup-w) {
+    .popup.registration.large {
+      margin-left: - 1/2 * $landing-reg-popup-w;
+    }
+  }
+  @media only screen and (max-height: $landing-reg-popup-h) {
+    .popup.registration.large {
+      position: absolute;
+      margin-top: 0;
+      top: 1/2 * $media-indent;
+    }
+  }
+}

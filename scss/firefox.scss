@@ -1,0 +1,114 @@
+$dynamic-game-line-height: 26px;
+
+@-moz-document url-prefix() {
+  @mixin animation ($name,$duration,$iteration-count,$timing-function,$animation-fill-mode) {
+    -webkit-animation-name: $name;
+    -moz-animation-name: $name;
+    -o-animation-name: $name;
+    animation-name: $name;
+    -webkit-animation-duration: $duration;
+    -moz-animation-duration: $duration;
+    -o-animation-duration: $duration;
+    animation-duration: $duration;
+    -webkit-animation-iteration-count: $iteration-count;
+    -moz-animation-iteration-count: $iteration-count;
+    -o-animation-iteration-count: $iteration-count;
+    animation-iteration-count: $iteration-count;
+    -webkit-animation-timing-function: $timing-function;
+    -moz-animation-timing-function: $timing-function;
+    -o-animation-timing-function: $timing-function;
+    animation-timing-function: $timing-function;
+    -webkit-animation-fill-mode: $animation-fill-mode;
+    -moz-animation-fill-mode: $animation-fill-mode;
+    -o-animation-fill-mode: $animation-fill-mode;
+    animation-fill-mode: $animation-fill-mode;
+  }
+  @mixin transform($transform-param) {
+    transform: $transform-param;
+    -moz-transform: $transform-param;
+    -ms-transform: $transform-param;
+    -o-transform: $transform-param;
+    -webkit-transform: $transform-param;
+  }
+  .main-menu-list {
+    li {
+      a {
+        padding-left: 42px;
+        padding-right: 43px;
+      }
+    }
+  }
+
+  .ent-soc {
+    margin-top: 16px;
+  }
+
+  .profile-info {
+    .alarm-count {
+      .text {
+        top: 1px;
+      }
+    }
+  }
+
+  .small-cashbox {
+    span {
+      &:before {
+        top: 4%;
+      }
+    }
+  }
+
+  .cashbox {
+    span {
+      &:before {
+        top: 4%;
+      }
+    }
+  }
+
+  .take-part-btn {
+    span {
+      &:before {
+        top: 4%;
+      }
+    }
+  }
+
+  .tournament-name-box {
+    padding-top: 13px;
+    padding-bottom: 16px;
+  }
+
+  .lead-players-table {
+    tr {
+      &.dynamic {
+        line-height: $dynamic-game-line-height;
+      }
+    }
+  }
+  @keyframes get-no-bg-change {
+    0% {
+      @include transform(none);
+    }
+    50% {
+      @include transform(scale(1.1));
+      @include transform(scale3d(1.1,1.1,1.1));
+    }
+    100% {
+      @include transform(none);
+    }
+  }
+  /* Landing */
+  .landing-block {
+    .get-btn {
+      .get-btn-bg {
+        @include animation(get-no-bg-change, 2s, infinite, linear, none);
+        background: url(.././pic/landing/start-btn.png) no-repeat 0 0;
+        &.change-bg {
+          background: url(.././pic/landing/end-btn.png) no-repeat 0 0;
+        }
+      }
+    }
+  }
+}
