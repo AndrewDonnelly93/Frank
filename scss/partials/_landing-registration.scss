@@ -97,22 +97,12 @@ $landing-reg-accept-conditions-block-w: 180px;
           position: absolute;
           top: 9px;
           left: 81px;
-          &:after {
-            display: block;
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            @include size($count-of-spins-w,$count-of-spins-h);
-            background: url(../pic/landing-registration/count-of-spins.png) no-repeat 0 0;
-            z-index: 2;
-          }
           &:before {
             display: block;
             content: '';
             position: absolute;
-            top: -26px;
-            left: -120px;
+            top: -19px;
+            left: -117px;
             @include size($landing-reg-lines-w,$landing-reg-lines-h);
             background: url(../pic/landing-registration/lines.png) no-repeat 0 0;
           }

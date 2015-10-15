@@ -76,22 +76,12 @@
           position: absolute;
           top: 9px;
           left: 81px; }
-          .landing-registration .popup.registration.large .registration-form .bonus-for-registration .count-of-spins:after {
-            display: block;
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 161px;
-            height: 98px;
-            background: url(../pic/landing-registration/count-of-spins.png) no-repeat 0 0;
-            z-index: 2; }
           .landing-registration .popup.registration.large .registration-form .bonus-for-registration .count-of-spins:before {
             display: block;
             content: '';
             position: absolute;
-            top: -26px;
-            left: -120px;
+            top: -19px;
+            left: -117px;
             width: 538px;
             height: 196px;
             background: url(../pic/landing-registration/lines.png) no-repeat 0 0; }
