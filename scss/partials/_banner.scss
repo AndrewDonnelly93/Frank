@@ -7,9 +7,12 @@ $banner-img-height: 121px;
 $label-popular-width: 48px;
 $label-popular-height: 139px;
 $banner-height: 121px;
-$game-description-width: 390px;
+$game-description-width: 380px;
 $game-description-height: 121px;
 $min-line-height: 1px;
+$banner-corner-w: 11px;
+$banner-corner-h: 10px;
+$banner-game-bg-w: 733px;
 
 .banner-game {
   @include border-box;
@@ -17,9 +20,45 @@ $min-line-height: 1px;
   width: $banner-game-width;
   margin-left: 3px;
   margin-bottom: 20px;
-  background: $banner-game-bg;
   padding-top: $banner-vertical-padding;
   padding-bottom: $banner-vertical-padding;
+  position: relative;
+  &:before {
+    position: absolute;
+    top: 0;
+    left: -16px;
+    width: $banner-game-bg-w;
+    bottom: 0;
+    content: "";
+    background: url("../pic/best-game-bg.png") 0 0 no-repeat;
+    background-size: 100% 100%;
+    @include box-shadow(0 0 7.4px 0.6px rgb(0, 0, 0));
+  }
+  .banner-game-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    &:before {
+      z-index: 5;
+      content: "";
+      top: - $banner-corner-h;
+      left: -16px;
+      position: absolute;
+      @include size($banner-corner-w,$banner-corner-h);
+      background: url("../pic/sprite/sprite.png") -24px -380px no-repeat;
+    }
+    &:after {
+      z-index: 5;
+      content: "";
+      bottom: - $banner-corner-h;
+      left: -16px;
+      position: absolute;
+      @include size($banner-corner-w,$banner-corner-h);
+      background: url("../pic/sprite/sprite.png") 0 -380px no-repeat;
+    }
+  }
 }
 
 .banner-img {
@@ -64,7 +103,7 @@ $min-line-height: 1px;
 }
 
 .game-description {
-  margin-right: 20px;
+  margin-right: 30px;
   @include border-box;
   float: right;
   position: relative;

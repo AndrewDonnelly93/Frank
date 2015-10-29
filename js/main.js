@@ -1,11 +1,11 @@
 /* Main menu initialise */
 
 
-    $(document).on("click", ".game-category-list>li", function (e) {
-        $(".game-category-list>li").removeClass("select").find("a.cat-name").removeClass("select");
-        $(this).addClass("select").find("a.cat-name").addClass("select");
-        e.preventDefault();
-    });
+$(document).on("click", ".game-category-list>li", function (e) {
+    $(".game-category-list>li").removeClass("select").find("a.cat-name").removeClass("select");
+    $(this).addClass("select").find("a.cat-name").addClass("select");
+    e.preventDefault();
+});
 
 /* Main menu initialise end */
 
@@ -42,8 +42,9 @@ $(function () {
        closePopups();
     }
 });
-        $(function () {
-            if ($(".popup-list").length) {
+
+$(function () {
+    if ($(".popup-list").length) {
         $(".anim-arrow").animate({"top": "+=20px"}, 1000, "linear");
     }
 });
